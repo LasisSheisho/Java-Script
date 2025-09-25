@@ -1,27 +1,18 @@
 <!DOCTYPE html>
-<html lang="pl">
 <head>
-    <meta charset="UTF-8">
     <title>Próchniewicz</title>
+    <meta charse="UTF-8">
 </head>
 <body>
-    <div style="color:red; font-size:50px;">
-        <script>
-            var l1_pro = prompt("liczba1=", "");
-            var l2_pro = prompt("liczba2=", "");
-            var a_pro = parseFloat(l1_pro);
-            var b_pro = parseFloat(l2_pro);
-
-            var wynik = Math.pow(a_pro + b_pro, 3);
-            var a3 = Math.pow(a_pro, 3);
-            var b3 = Math.pow(b_pro, 3);
-            var a2b = 3 * Math.pow(a_pro, 2) * b_pro;
-            var ab2 = 3 * a_pro * Math.pow(b_pro, 2);
-
-            document.write("(" + a_pro + " + " + b_pro + ")^3 = " + "<br>");
-            document.write(+a_pro+"^3 + 3*(("+a_pro+")^"+b_pro+")*("+a_pro+") + 3*("+a_pro+")*(("+b_pro+")^"+b_pro+") + "+b_pro+"^3 " + " = " + "<br>");
-            document.write(a3 + " + " + a2b + " + " + ab2 + " + " + b3 + " = " + wynik);
+    <div style="color:red;font-size:50px;">
+        <script language="JavaScript">
+            var l1_pro=prompt("liczba1=","");
+            var l2_pro=prompt("liczba2=","");
+            var a_pro=parseFloat(l1_pro);
+            var b_pro=parseFloat(l2_pro);
+            document.write("("+a_pro+"+"+b_pro+")^3"+"=");
+            document.write(+a_pro+"^3 + 3*(("+a_pro+")^"+b_pro+")*("+a_pro+") + 3*("+a_pro+")*(("+b_pro+")^"+b_pro+") + "+b_pro+"^3 = ");
+            document.write(a_pro**3 + 3*a_pro**2*b_pro + 3*a_pro*b_pro**2+ b_pro**3);
         </script>
     </div>
 </body>
-</html>
