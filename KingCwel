@@ -1,0 +1,20 @@
+Rozwiąż zadanie. 
+a)Nazwy funkcji:
+ function AB_kry() 
+function BC_kry() 
+function AC_kry()  
+b)Nazwy zmiennych 
+A(xa_kow,ya_kow)  B(xb_kow,yb_kow)   C(xc_kow,yc_kow) 
+c)Wczytaj punkty w okienkach ( sześć okienek). 
+d)Wypisz obliczone długości boków. 
+Treść zadania
+ Wczytaj trzy punkty nie współliniowe. Punkty tworzą trójkąt. A(xa_kow,ya_kow)  
+B(xb_kow,yb_kow)   C(xc_kow,yc_kow) z  użyciem sześciu okienek formularza (w 
+poprzednim zadaniu było jedno okienko do wczytaniu boku kwadratu).  Oblicz z użyciem 
+funkcji długości boków  AB   BC  AC.   
+Wskazówka: odległość między punktami F(x1,y1)  oraz G(x2,y2) 
+Do obliczeń użyj modułu Math.
+ var a = Math.sqrt(4);   pierwiastek z 2 
+var a = Math.pow(4,2);  
+4 do potęgi 2 czyli do kwadratu 
+Wypisz obliczone długości boków.
