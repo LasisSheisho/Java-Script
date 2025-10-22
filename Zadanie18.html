@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+ <head>
+ <title> Użycie fukcji </title>
+ <meta charset="utf-8">
+ </head>
+<body>
+ <div style="color:navy;font-size:50px;">
+ <script language="JavaScript">
+ var a=parseFloat(prompt("a=",""));
+ var b=parseFloat(prompt("b=",""));
+ function suma_pro(a, b) {
+ return a + b;
+ }
+ document.write("suma="+suma_pro(a,b)+"<br>");
+function odejmowanie_pro(a, b) {
+  let wynik = a - b;
+  console.log("Wynik odejmowania:", wynik);
+  return wynik;
+}
+function mnozenie_pro(a, b) {
+  let wynik = a * b;
+  console.log("Wynik mnożenia:", wynik);
+  return wynik;
+}
+function od_kwadratu_pro(a, b) {
+  let kwadratA = a ** 2;
+  let kwadratB = b ** 2;
+  console.log(`${a}^2 = ${kwadratA}`);
+  console.log(`${b}^2 = ${kwadratB}`);
+  return [kwadratA, kwadratB];
+}
+function reszta_z_dzielenia_a_przez_b_pro(a, b) {
+  let wynik = a % b;
+  console.log(`Reszta z dzielenia ${a} przez ${b} wynosi: ${wynik}`);
+  return wynik;
+}
+console.log("---- Test funkcji ----");
+odejmowanie_pro(10, 4);
+mnozenie_pro(3, 5);
+od_kwadratu_pro(3, 4);
+reszta_z_dzielenia_a_przez_b_pro(10, 3);
+</script>
+</div>
+</body>
+</html>

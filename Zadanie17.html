@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Odpowiedzi teoretyczne – JavaScript</title>
+</head>
+<body>
+
+<h2>Odpowiedzi na pytania teoretyczne</h2>
+
+<textarea rows="25" cols="100">
+<b><u>1. Wymień cztery sposoby wyprowadzania danych w JS:</u></b>
+<b>Odpowiedź:</b>
+- <b>alert()</b> – wyświetla komunikat w okienku dialogowym.
+- <b>console.log()</b> – wyświetla dane w konsoli przeglądarki.
+- <b>document.write()</b> – zapisuje dane bezpośrednio w dokumencie HTML.
+- <b>innerHTML</b> – wstawia lub modyfikuje zawartość elementu HTML.
+
+------------------------------------------------------------
+
+<b><u>2. Czym jest funkcja w JS, omów przy użyciu 4 podpunktów:</u></b>
+<b>Odpowiedź:</b>
+1. <b>Definicja:</b> Funkcja w JavaScript to blok kodu, który można wielokrotnie wywoływać, aby wykonać określone zadanie.
+2. <b>Deklaracja:</b> Funkcję definiuje się za pomocą słowa kluczowego <b>function</b> lub jako funkcję strzałkową (<b>=></b>).
+3. <b>Parametry i argumenty:</b> Funkcje mogą przyjmować parametry, które pozwalają przekazywać dane do funkcji.
+4. <b>Zwracanie wartości:</b> Za pomocą słowa <b>return</b> funkcja może zwracać wynik swojego działania.
+
+------------------------------------------------------------
+
+<b><u>3. Omów metody getElementsByName, getElementById, getElementsByTagName:</u></b>
+
+<b>Metoda:</b> getElementById()
+<b>Opis:</b> Wyszukuje element o określonym identyfikatorze (ID).
+<b>Zwracany typ:</b> Pojedynczy element (obiekt).
+<b>Przykład:</b> document.getElementById("nazwaID")
+
+<b>Metoda:</b> getElementsByName()
+<b>Opis:</b> Wyszukuje elementy po atrybucie name.
+<b>Zwracany typ:</b> Kolekcja elementów (NodeList).
+<b>Przykład:</b> document.getElementsByName("nazwa")
+
+<b>Metoda:</b> getElementsByTagName()
+<b>Opis:</b> Wyszukuje wszystkie elementy o określonej nazwie tagu (np. div, p, img).
+<b>Zwracany typ:</b> Kolekcja elementów (HTMLCollection).
+<b>Przykład:</b> document.getElementsByTagName("p")
+
+------------------------------------------------------------
+
+<b><u>4. Omów właściwości innerHTML, innerText, className:</u></b>
+
+<b>innerHTML</b> – pozwala odczytać lub zmienić <u>zawartość HTML</u> danego elementu, włącznie ze znacznikami.
+Przykład: document.getElementById("demo").innerHTML = "<b>Tekst pogrubiony</b>";
+
+<b>innerText</b> – odczytuje lub ustawia <u>czysty tekst</u> wewnątrz elementu (ignoruje znaczniki HTML).
+Przykład: document.getElementById("demo").innerText = "Zwykły tekst";
+
+<b>className</b> – pozwala odczytać lub zmienić <u>nazwę klasy CSS</u> przypisaną do elementu.
+Przykład: document.getElementById("demo").className = "nowa-klasa";
+</textarea>
+
+</body>
+</html>

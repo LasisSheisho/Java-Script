@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<title>Trapez równoramienny – Próchniewicz</title>
+</head>
+<body style="font-family:Arial; background-color:#eef6ff;">
+<h2 style="color:darkblue;">Obliczanie pola i obwodu trapezu równoramiennego</h2>
+<form name="trapez" style="font-size:18px;">
+  Górna podstawa a [cm]: <input type="number" id="a" step="0.01"><br><br>
+  Dolna podstawa b [cm]: <input type="number" id="b" step="0.01"><br><br>
+  Wysokość h [cm]: <input type="number" id="h" step="0.01"><br><br>
+  <input type="button" value="Oblicz" onclick="oblicz()"><br><br>
+  Pole [cm²]: <input type="text" id="pole" readonly><br><br>
+  Obwód [cm]: <input type="text" id="obwod" readonly><br><br>
+</form>
+<script>
+// Autor: Próchniewicz
+function Pow_prochniewicz(a, b, h) {
+  //Trapez: P = ((a + b) / 2) * h
+  let P = ((a + b) / 2) * h;
+  return P;
+}
+function Obw_prochniewicz(a, b, h) {
+  let roznica = Math.abs(b - a) / 2;
+  let ramie = Math.sqrt(Math.pow(roznica, 2) + Math.pow(h, 2));
+  //Obwód: O = a + b + 2 * ramie
+  let O = a + b + 2 * ramie;
+  return O;
+}
+function oblicz() {
+  let a = parseFloat(document.getElementById("a").value);
+  let b = parseFloat(document.getElementById("b").value);
+  let h = parseFloat(document.getElementById("h").value);
+  if (isNaN(a) || isNaN(b) || isNaN(h) || a <= 0 || b <= 0 || h <= 0) {
+    alert("Podaj poprawne wartości dodatnie!");
+    return;
+  }
+  let pole = Pow_prochniewicz(a, b, h);
+  let obwod = Obw_prochniewicz(a, b, h);
+  document.getElementById("pole").value = pole.toFixed(2);
+  document.getElementById("obwod").value = obwod.toFixed(2);
+  document.write("<p style='color:blue; font-size:20px;'>");
+  document.write("a = " + a + " [cm]<br>");
+  document.write("b = " + b + " [cm]<br>");
+  document.write("h = " + h + " [cm]<br>");
+  document.write("Pole trapezu = " + pole.toFixed(2) + " [cm²]<br>");
+  document.write("Obwód trapezu = " + obwod.toFixed(2) + " [cm]");
+  document.write("</p>");
+  }
+</script>
+</body>
+</html>
