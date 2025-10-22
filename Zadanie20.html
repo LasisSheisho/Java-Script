@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Obliczanie boków trójkąta</title>
+    <script>
+        function AB_pro(xa, ya, xb, yb) {
+            return Math.sqrt(Math.pow(xb - xa, 2) + Math.pow(yb - ya, 2));
+        }
+        function BC_pro(xb, yb, xc, yc) {
+            return Math.sqrt(Math.pow(xc - xb, 2) + Math.pow(yc - yb, 2));
+        }
+        function AC_pro(xa, ya, xc, yc) {
+            return Math.sqrt(Math.pow(xc - xa, 2) + Math.pow(yc - ya, 2));
+        }
+        function obliczBoki() {
+            let xa_pro = parseFloat(document.getElementById("xa").value);
+            let ya_pro = parseFloat(document.getElementById("ya").value);
+            let xb_pro = parseFloat(document.getElementById("xb").value);
+            let yb_pro = parseFloat(document.getElementById("yb").value);
+            let xc_pro = parseFloat(document.getElementById("xc").value);
+            let yc_pro = parseFloat(document.getElementById("yc").value);
+            let AB = AB_pro(xa_pro, ya_pro, xb_pro, yb_pro);
+            let BC = BC_pro(xb_pro, yb_pro, xc_pro, yc_pro);
+            let AC = AC_pro(xa_pro, ya_pro, xc_pro, yc_pro);
+            document.getElementById("wynik").innerHTML = 
+                "Długość boku AB: " + AB.toFixed(2) + "<br>" +
+                "Długość boku BC: " + BC.toFixed(2) + "<br>" +
+                "Długość boku AC: " + AC.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+    <h2>Obliczanie długości boków trójkąta</h2>
+    <p>Wprowadź współrzędne punktów A, B i C:</p>
+    <label for="xa">A x:</label>
+    <input type="number" id="xa"><br>
+    <label for="ya">A y:</label>
+    <input type="number" id="ya"><br>
+    <label for="xb">B x:</label>
+    <input type="number" id="xb"><br>
+    <label for="yb">B y:</label>
+    <input type="number" id="yb"><br>
+    <label for="xc">C x:</label>
+    <input type="number" id="xc"><br>
+    <label for="yc">C y:</label>
+    <input type="number" id="yc"><br><br>
+    <button onclick="obliczBoki()">Oblicz długości boków</button>
+    <h3>Wyniki:</h3>
+    <p id="wynik"></p>
+</body>
+</html>
