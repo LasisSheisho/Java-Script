@@ -1,0 +1,59 @@
+<textarea>
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Programowanie obiektowe w JavaScript — Konstruktor, Prototype, Obiekty</title>
+  <style>
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;line-height:1.45;margin:30px;color:#111}
+    h1{font-size:2.2rem;margin-top:28px}
+  </style>
+</head>
+<body>
+  <h1>Temat: Definiowanie konstruktora, dodawanie metody do konstruktora z użyciem prototypu, powoływanie obiektów, dostęp do właściwości (pól) obiektów, użycie zdefiniowanej metody.</h1>
+
+  <script type="text/javascript">
+  function Uczen(nazwisko, imie, klasa, srednia) {
+    this.nazwisko = nazwisko;
+    this.imie = imie;
+    this.klasa = klasa;
+    this.srednia = srednia;
+  }
+
+  Uczen.prototype.wyswietl = function() {
+    document.write("Uczeń: " + this.imie + " " + this.nazwisko + ", klasa: " + this.klasa + ", średnia: " + this.srednia + "<br>");
+  };
+
+  var uczen1 = new Uczen("Kowalski", "Jan", "4A", 4.5);
+  var uczen2 = new Uczen("Nowak", "Anna", "3B", 5.0);
+  var uczen3 = new Uczen("Wiśniewski", "Piotr", "2C", 3.8);
+
+  document.write("<h2>Dostęp do pól obiektów:</h2>");
+  document.write(uczen1.nazwisko + " " + uczen1.imie + " — klasa: " + uczen1.klasa + "<br>");
+  document.write(uczen2.nazwisko + " " + uczen2.imie + " — klasa: " + uczen2.klasa + "<br>");
+  document.write(uczen3.nazwisko + " " + uczen3.imie + " — klasa: " + uczen3.klasa + "<br><br>");
+
+  document.write("<h2>Użycie metody prototype:</h2>");
+  uczen1.wyswietl();
+  uczen2.wyswietl();
+  uczen3.wyswietl();
+
+  uczen1.ocena_z_zachowania = "wzorowe";
+  uczen2.ocena_z_zachowania = "bardzo dobre";
+  uczen3.ocena_z_zachowania = "dobre";
+
+  Uczen.prototype.uczen_pokaz_nazwisko_ucznia = function() {
+    document.write("Nazwisko ucznia: " + this.nazwisko + ", ocena z zachowania: " + this.ocena_z_zachowania + "<br>");
+  };
+
+  document.write("<h2>Wywołanie dodatkowej metody:</h2>");
+  uczen1.uczen_pokaz_nazwisko_ucznia();
+  uczen2.uczen_pokaz_nazwisko_ucznia();
+  uczen3.uczen_pokaz_nazwisko_ucznia();
+  </script>
+
+  <p><strong>Programowanie obiektowe w JavaScript (przed 2015)</strong></p>
+</body>
+</html>
+  </textarea>
