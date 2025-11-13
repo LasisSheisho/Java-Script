@@ -1,20 +1,82 @@
-Rozwiąż zadanie. 
-a)Nazwy funkcji:
- function AB_kry() 
-function BC_kry() 
-function AC_kry()  
-b)Nazwy zmiennych 
-A(xa_kow,ya_kow)  B(xb_kow,yb_kow)   C(xc_kow,yc_kow) 
-c)Wczytaj punkty w okienkach ( sześć okienek). 
-d)Wypisz obliczone długości boków. 
-Treść zadania
- Wczytaj trzy punkty nie współliniowe. Punkty tworzą trójkąt. A(xa_kow,ya_kow)  
-B(xb_kow,yb_kow)   C(xc_kow,yc_kow) z  użyciem sześciu okienek formularza (w 
-poprzednim zadaniu było jedno okienko do wczytaniu boku kwadratu).  Oblicz z użyciem 
-funkcji długości boków  AB   BC  AC.   
-Wskazówka: odległość między punktami F(x1,y1)  oraz G(x2,y2) 
-Do obliczeń użyj modułu Math.
- var a = Math.sqrt(4);   pierwiastek z 2 
-var a = Math.pow(4,2);  
-4 do potęgi 2 czyli do kwadratu 
-Wypisz obliczone długości boków.
+Użyj instrukcji if…. else ….. do sprawdzenia czy użytkownik wie od, którego roku Javascript jest w 
+użyciu. 
+Wczytać rok do zmiennej rok_kow i są dwie własności możliwości: 
+Brawo znasz rok od kiedy działa Javasript (niebieski, wielkość 4) 
+Źle musisz jeszcze poczytać (czerwony, wielkość 7) 
+Wyświetli się również napis „wczytany rok=…..” 
+Operatory logiczne 
+Operator  
+&&   
+Opis    
+i    
+Przykład 
+x=3  y=4    (x < 9 && y > 2) 
+||   
+!  
+Uwaga1
+ lub    
+zaprzeczenie    
+x=3  y=4     (x==8 || y==6) 
+x=3  y=4     !(x==y)   
+wynikprawda 
+wynikfałsz 
+wynikprawda 
+Istnieją dwa różne pojęcia: 
+ rozdzielczość ekranu/monitora, 
+ szerokość/wysokość ekranu przeglądarki w pikselach. 
+Czyli pamiętaj: 
+Pamiętaj, że rozdzielczość ekranu to nie to samo co szerokość/wysokość ekranu przeglądarki 
+w pikselach:-) 
+Jak wykryć rozdzielczość ekranu/monitora? 
+Chcesz sprawdzić jaką rozdzielczość ekranu ma ustawioną użytkownik, aby w razie potrzeby 
+poinformować go, że powinien ja zwiększyć, żeby strona WWW była wyświetlana 
+poprawnie. 
+Rozdzielczość ekranu każdy może mieć inną. np. 1920x1200 lub 800x600 pikseli, ale wciąż 
+garść osób korzysta z rozdzielczości 640x480. Można im więc zasugerować, że strony lepiej 
+wyglądają przy rozdzielczości 1024x768. 
+Przykład1
+ <script> 
+document.write("Twoja rozdzielczość ekranu to: "+screen.width+"x"+screen.height); 
+</script> 
+screen.widthszerokość ekranu, 
+screen.heightwysokość ekranu. 
+Przykład2
+ <script> 
+if (screen.width<800 || screen.height<600) 
+document.write("Rozdzielczość ekranu powinna być większa niż 800x600"); 
+</script> 
+Przykład3
+ Możesz też przekierować użytkownika na stronę przeznaczoną dla wybranej rozdzielczości: 
+<script> 
+if (screen.width==800 && screen.height==600) { 
+window.location="index800.html"; 
+} else if (screen.width==1024 && screen.height==768) { 
+window.location="index1024.html"; 
+60 
+} else { 
+window.location="inna.html"; 
+} 
+</script> 
+Jak wykryć aktualny rozmiar ekranu przeglądarki (strony). 
+Użyj window.innerWidthi , window.innerHeightaby aby uzyskać aktualny rozmiar ekranu 
+strony. 
+Przykład 
+Wyświetla wysokość i szerokość okna przeglądarki (NIE uwzględniając pasków 
+narzędzi/pasków przewijania): 
+var w = window.innerWidth; 
+var h = window.innerHeight; 
+<!DOCTYPE html> 
+<html> 
+<body> 
+<h2>Get the size of the current screen/window</h2> 
+<p>Przykład wyświetla szerokość i wysokość okna przeglądarki: (NIE uwzględniając 
+pasków narzędzi/pasków przewijania): </p> 
+<p id="demo"></p> 
+<script> 
+var w = window.innerWidth; 
+var h = window.innerHeight; 
+var x = document.getElementById("demo"); 
+x.innerHTML = "szerokość przeglądarki: " + w + ", wysokość: " + h + "."; 
+</script> 
+</body> 
+</html> 
