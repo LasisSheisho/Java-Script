@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int n, k, i, n2;
+    i = 1;
+    cout << "Podaj liczbę N: ";
+    cin >> n2;
+    n = n2;
+    cout << "Podaj liczbę K: ";
+    cin >> k;
+    while (k > i) {
+        n = n*n2;
+        i = i+1;
+    }
+    cout << "wynik = " << n;
+    return 0;
+}
